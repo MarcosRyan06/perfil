@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #0d0c0c;
+    color: white;
+    padding: 36px 16px;
+}
+.card{
+    width: 100%;
+    max-width: 520px;
+    padding: 28px;
+    background:linear-gradient(#131313, #060606);
+    border-radius: 26px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    border: 2px solid rgba(255,255,255,0.03);
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.top{
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+.avatar img{
+    width: 104px;
+    height: 104px;
+    border-radius: 60px;
+    border: 3px solid #c8102e;
+    flex: 0 0 84;
+}
+.bio{
+    flex: 1;
+}
+.descricao{
+    color: #959595;
+}
+.botoes{
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.bt{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #c8102e;
+    background:linear-gradient(#131313, #060606);
+    backdrop-filter:blur(6px);
+    transition:all .3s ease;
+}
