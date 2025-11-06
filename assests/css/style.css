@@ -140,7 +140,7 @@ footer {
     font-size: 19px;
     transition: 0.3s;
 }
-    input[name="radio-btn"] { display: none; }
+    input[name="radio-bt"] { display: none; }
 
     #radio1:checked ~ .slides { transform: translateX(0); }
     #radio2:checked ~ .slides { transform: translateX(-20%); }
@@ -164,7 +164,33 @@ footer {
     cursor: pointer;
     transition: all 0.3s;
 }
-.manual-btn:hover {
+.manual-bt:hover {
     background: #c30000;
     border-color: #c30000;
 }
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.nav-arrow:hover {
+  background: #c30000;
+  box-shadow: 0 0 8px rgba(195, 0, 0, 0.6);
+}
+
+.nav-left { left: 10px; }
+.nav-right { right: 10px; }
+
