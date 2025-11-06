@@ -1,60 +1,170 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background: #0d0c0c;
-    color: white;
-    padding: 36px 16px;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0b0b0b;
+  color: white;
+  padding: 36px 16px;
 }
-.card{
+.card {
+  width: 100%;
+  max-width: 520px;
+  padding: 28px;
+  background: linear-gradient(#131313, #060606);
+  border-radius: 26px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.top {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.avatar img {
+  width: 104px;
+  height: 104px;
+  border-radius: 60px;
+  border: 3px solid #c8102e;
+  flex: 0 0 84;
+}
+.bio {
+  flex: 1;
+}
+.descricao {
+  color: #959595;
+}
+.botoes {
+  margin-top: 18px;
+  display: grid;
+  gap: 12px;
+
+  /* no PC → botões lado a lado */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  justify-content: center;
+}
+
+a.bt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  border-radius: 12px;
+
+  font-size: 17px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  background-color: #0f0f0f;
+  border: 1px solid #444444;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  gap: 19px;
+}
+
+a.bt:hover {
+  transform: scale(1.05);
+  background-color: #c30000;
+  box-shadow: 0 0 12px rgba(195, 0, 0, 0.5);
+}
+a.bt i {
+  font-size: 19px;
+  vertical-align: middle; 
+  position: relative;
+  top: -1px; 
+}
+
+
+footer {
+  margin-top: 18px;
+  font-size: 13px;
+  text-align: center;
+  color: #a1a1a1;
+}
+.carrosel{
     width: 100%;
     max-width: 520px;
-    padding: 28px;
-    background:linear-gradient(#131313, #060606);
-    border-radius: 26px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    border: 2px solid rgba(255,255,255,0.03);
+    position: relative;
+    border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    background: linear-gradient(#131313, #060606);
+    padding-bottom: 50px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
 }
-.top{
+.slides{
     display: flex;
-    gap: 18px;
-    align-items: center;
+    width: 500%;
+    transition: transform 0.8s ease;
 }
-.avatar img{
-    width: 104px;
-    height: 104px;
-    border-radius: 60px;
-    border: 3px solid #c8102e;
-    flex: 0 0 84;
+
+.slide{
+    width: 20%;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 28px;
 }
-.bio{
-    flex: 1;
+.slide img{
+    width: 100%;
+    max-width: 380px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
 }
-.descricao{
-    color: #959595;
+
+.slide h2{
+    font-size: 15px;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: 500;
 }
-.botoes{
-    margin-top: 18px;
-    display: grid;
-    grid-template-columns: 1fr;
-}
-.bt{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 14px;
-    border-radius: 12px;
+.visita-bt{
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 10px;
+    background: linear-gradient(#c30000, #5d0000);
+    color: white;
     text-decoration: none;
     font-weight: 600;
-    border: 1px solid #c8102e;
-    background:linear-gradient(#131313, #060606);
-    backdrop-filter:blur(6px);
-    transition:all .3s ease;
+    font-size: 19px;
+    transition: 0.3s;
+}
+    input[name="radio-btn"] { display: none; }
+
+    #radio1:checked ~ .slides { transform: translateX(0); }
+    #radio2:checked ~ .slides { transform: translateX(-20%); }
+    #radio3:checked ~ .slides { transform: translateX(-40%); }
+    #radio4:checked ~ .slides { transform: translateX(-60%); }
+    #radio5:checked ~ .slides { transform: translateX(-80%); }
+
+.manual{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 5;
+}
+.manual-bt{
+    border: 4px solid #5d0000;
+    padding: 6px;
+    border-radius: 70%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.manual-btn:hover {
+    background: #c30000;
+    border-color: #c30000;
 }
